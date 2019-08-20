@@ -21,7 +21,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
-  const template = path.resolve(`src/templates/markdown-page.js`)
+  const template = path.resolve(`src/lib/templates/markdown-page.js`)
   const result = await graphql(`
     {
       allMdx {
